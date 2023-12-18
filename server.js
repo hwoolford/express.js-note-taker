@@ -1,7 +1,7 @@
 const express = require('express');
 const { readFile, writeFile } = require('fs').promises;
 // const { readFile, writeFile } = require('fs/promises');
-const notes = require('./db/db.json');
+
 const path = require('path');
 const api = require('./routes/index');
 
@@ -17,13 +17,8 @@ app.use('/api', api);
 
 app.use(express.static('public'));
 
-app.get('*', (req, res) =>
-  res.sendFile(path.join(__dirname, '/public/index.html'))
-);
 
-app.get('/notes', (req, res) =>
-  res.sendFile(path.join(__dirname, '/public/notes.html'))
-);
+
 
 
 
