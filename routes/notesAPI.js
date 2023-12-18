@@ -2,10 +2,9 @@ const router = require('express').Router();
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
 const fs = require('fs');
-const { writeToFile } = require('../../UNH-VIRT-FSF-PT-09-2023-U-LOLC/11-Express/01-Activities/28-Stu_Mini-Project/Main/helpers/fsUtils');
-// const notesDB = require('../db/db.json')
 const notesDBPath = path.join(__dirname, '../db/db.json');
 
+// Reads the existing saved notes and posts them to the page
 router.get('/api/notes', (req, res) => {
   fs.readFile(notesDBPath, 'utf8', (err, data) => {
     if (err) {
@@ -18,6 +17,7 @@ router.get('/api/notes', (req, res) => {
   });
 });
 
+// Posting new note and appending it to the page
 router.post('/api/notes', (req, res) => {
   console.log(req.body);
   const { title, text, id } = req.body;
@@ -54,19 +54,7 @@ function readAndAppend(newNote, filePath) {
   });
 }
 
-// router.delete('/api/notes/:id', (req, res) => {
-//     const noteId = req.params.id;
-//     fs.readFile(notesDBPath)
-//     .then((data) => JSON.parse(data))
-//     .then((json) => {
-//         const result = json.filter((note) => note.id !== noteId);
-
-//         fs.writeToFile(notesDBPath, result);
-
-//         res.json(`Item ${id} has been deleted.`)
-//     });
-// });
-
+// Deletes a note when trashcan is clicked based on the note's unique id
 router.delete('/api/notes/:id', (req, res) => {
     const noteId = req.params.id;
     const json = JSON.parse(fs.readFileSync(notesDBPath));
