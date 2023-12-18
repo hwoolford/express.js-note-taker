@@ -1,5 +1,5 @@
-const path = require('path');
 const notesAPI = require('express').Router();
+const path = require('path');
 const { v4: uuidv4 } = require('uuid');
 const fs = require('fs');
 const notesDB = require('../db/db.json')
