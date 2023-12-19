@@ -10,7 +10,7 @@ In order to use this application, you must have node.js installed on your machin
 
 The GIF below shows the functionality of the notetaking application.
 
-![Note Taker Functionality](./assets/images/)
+![Note Taker Functionality](./images/ExpressJSNoteTaker.gif)
 
 ## Installation
 1. Clone the repository to your machine
@@ -21,7 +21,7 @@ The GIF below shows the functionality of the notetaking application.
 
 ## Links
 - [GitHub Repository](https://github.com/hwoolford/express.js-note-taker) 
-- [Deployed Application]()
+- [Deployed Application]() Coming Soon!
 
 ## Acknowledgements
 - UUID Dependency information from [Node.js Crash Course](https://youtu.be/fBNz5xF-Kx4)
