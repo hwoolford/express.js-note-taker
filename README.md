@@ -21,7 +21,7 @@ The GIF below shows the functionality of the notetaking application.
 
 ## Links
 - [GitHub Repository](https://github.com/hwoolford/express.js-note-taker) 
-- [Deployed Application]() Coming Soon!
+- [Deployed Application](https://expressjsnotes-2ff30fffe413.herokuapp.com/)
 
 ## Acknowledgements
 - UUID Dependency information from [Node.js Crash Course](https://youtu.be/fBNz5xF-Kx4)
